@@ -36,7 +36,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.6
   google_fonts:
-  responsive_framework:
+  responsive_framework: ^0.1.7
   smooth_page_indicator:
   font_awesome_flutter:
   url_launcher:

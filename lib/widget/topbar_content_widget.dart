@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutterweb/utils/constants.dart';
+import 'package:flutterweb/utils/globals.dart';
 import 'package:flutterweb/utils/screen_helper.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
+
+import 'header_logo_widget.dart';
 
 class TopbarContentWidget extends StatefulWidget {
   const TopbarContentWidget({super.key,
@@ -20,8 +23,13 @@ class _TopbarContentWidgetState extends State<TopbarContentWidget> {
   Widget build(BuildContext context) {
     final screenSize=MediaQuery.of(context).size;
     final desktopHeader=PreferredSize(preferredSize: Size(screenSize.width,70),
-        child: DesktopTabBar())
-    return ScreenHelper(mobile: mobile, tablet: tablet, desktop: desktop);
+        child: DesktopTabBar(
+          widget: widget,
+          screenSize: screenSize,
+          itemScrollController: widget.itemScrollController,
+        ));
+    return ScreenHelper(mobile: buildMobileHeader(), tablet: desktopHeader,
+        desktop: desktopHeader);
   }
 }
 class DesktopTabBar extends StatelessWidget {
@@ -85,3 +93,22 @@ class DesktopTabBar extends StatelessWidget {
     );
   }
 }
+Widget buildMobileHeader()=>SafeArea(
+  child: Padding(
+    padding: EdgeInsets.all(20),
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        HeaderLogoWidget(),
+        GestureDetector(
+          onTap: ()=>Globals.scaffoldKey.currentState!.openDrawer(),
+          child: Icon(
+            Icons.menu,
+            color: Colors.white,
+            size: 28,
+          ),
+        )
+      ],
+    ),
+  ),
+);

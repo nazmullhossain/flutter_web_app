@@ -77,7 +77,8 @@ class _WelcomePagesState extends State<WelcomePages> {
                             animatedTexts: [
                               RotateAnimatedText("Passionate"),
                               RotateAnimatedText("Hard Working"),
-                              RotateAnimatedText("Flutter Developer"),
+                              RotateAnimatedText("Problem solver"),
+                              RotateAnimatedText("Mobile Apps Developer(Android &ios"),
                             ],
                           ))
                         ],

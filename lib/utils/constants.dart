@@ -7,7 +7,7 @@ const captionColor = Colors.grey;
 const desktopMaxWidth = 1000.0;
 const tabletMaxWidth = 760.0;
 
-const name = 'John Christopher';
+const name = 'Md Nazmul hossain';
 const profileImage = 'assets/profile.jpg';
 
 const helloTag = 'Hi there, Welcome to My Space';
@@ -24,11 +24,9 @@ const education =
 const skill =
     'Expert Flutter Dev and I offer more than just programming skills.';
 
-const address = 'California(CA),';
-const country = 'USA';
-const phone1 = '(310) 545-8034';
-const phone2 = '(310) 545-8034';
-const email1 = 'john@gmail.com';
-const email2 = 'freelancer@gmail.come';
-const whatsApp1 = '(310) 545-8034';
-const whatsApp2 = '(310) 545-8034';
+const address = 'Dhaka';
+const country = 'Bangladesh';
+const phone1 = '+8801949540792';
+const email1 = 'mdnazmull.cse@gmail.com';
+const whatsApp1 = '+8801949540792';
+
